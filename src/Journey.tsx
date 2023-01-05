@@ -4,13 +4,13 @@ function Journey() {
     return(
         <section className = "container mx-auto py-3 max-w-screen-xl">
             <h2 className = "mb-5 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white text-center">My Journey</h2>
-            <p className = "text-center text-gray-400 mb-12 text-xl">Im a founder, DevOps, and fullstack engineer. <br/>
+            <p className = "text-center text-gray-400 mb-12 text-xl">I am a founder, DevOps, and fullstack engineer. <br/>
             My core competitencies are <span className = "text-sky-400">Managing Engineering Teams</span>, DevOps (<span className= "text-sky-400"> Docker, AWS </span>), Backend (<span className= "text-sky-400">Rails, Flask, Django</span>) and Frontend (<span className= "text-sky-400">React</span>)</p>
-            <div className = 'mx-5 justify-center mx-auto'>
+            <div className = 'pl-2 mx-5 justify-center mx-auto'>
 
                 <div className = "my-10 grid gap-4 grid-cols-5 mx-auto">
-                    <div className= "col-span-1"> <img src= "https://via.placeholder.com/150"/> </div>
-                    <div className = "col-span-4">
+                    <div className= "col-span-0 md:col-span-1"> <img src={process.env.PUBLIC_URL + "medhyve logo.png"} className = "object-scale-down max-w-[100px] mx-auto hidden lg:block"/> </div>
+                    <div className = "col-span-5 md:col-span-4">
                         <h3 className = "font-bold text-2xl md:text-3xl xl:text-4xl">CEO - MedHyve</h3>
                         <div><span className = "text-sky-400 font-light">July 2022 - Current </span></div>
                         <p className = "mb-3 text-gray-400">
@@ -30,8 +30,8 @@ function Journey() {
                 </div>
 
                 <div className = "my-10 grid gap-4 grid-cols-5 mx-auto">
-                    <div className= "col-span-1"> <img src= "https://via.placeholder.com/150"/> </div>
-                    <div className = "col-span-4">
+                    <div className= "col-span-0 md:col-span-1"> <img src={process.env.PUBLIC_URL + "medhyve logo.png"} className = "object-scale-down max-w-[100px] mx-auto hidden lg:block"/></div>
+                    <div className = "col-span-5 md:col-span-4">
                         <h3 className = "font-bold text-2xl md:text-3xl xl:text-4xl">CTO - MedHyve</h3>
                         <div><span className = "text-sky-400 font-light">Dec 2017 - July 2022</span></div>
                         <p className = "mb-3 text-gray-400">
@@ -62,8 +62,8 @@ function Journey() {
                 </div>
 
                 <div className = "my-10 grid gap-4 grid-cols-5 mx-auto">
-                    <div className= "col-span-1"> <img src= "https://via.placeholder.com/150"/> </div>
-                    <div className = "col-span-4">
+                    <div className= "col-span-0 md:col-span-1"><img src={process.env.PUBLIC_URL + "Funasia.png"} className = "object-scale-down max-w-[150px] mx-auto max-w-[100px] mx-auto hidden lg:block"/> </div>
+                    <div className = "col-span-5 md:col-span-4">
                         <h3 className = "font-bold text-2xl md:text-3xl xl:text-4xl">Freelance Web & Mobile Dev - FunAsia</h3>
                         <div><span className = "text-sky-400 font-light">Nov 2018 - Jan 2021</span></div>
                         <p className = "mb-3 text-gray-400">Funasia is a software dev company that takes clients from various industries</p>
@@ -82,8 +82,8 @@ function Journey() {
                 </div>
 
                 <div className = "my-10 grid gap-4 grid-cols-5 mx-auto">
-                    <div className= "col-span-1"> <img src= "https://via.placeholder.com/150"/> </div>
-                    <div className = "col-span-4">
+                    <div className= "col-span-0 md:col-span-1"><img src={process.env.PUBLIC_URL + "sali logo.png"} className = "object-scale-down max-w-[100px] mx-auto hidden lg:block"/> </div>
+                    <div className = "col-span-5 md:col-span-4">
                         <h3 className = "font-bold text-2xl md:text-3xl xl:text-4xl">Freelance Mobile Dev - Sali</h3>
                         <div><span className = "text-sky-400 font-light">Aug 2017 - Feb 2018 </span></div>
                         <p className = "mb-3 text-gray-400">Sali is an app that aims to teach users how to perform basic medical procedures such as CPR through the phone’s gyroscope and accelerometer</p>
@@ -96,8 +96,8 @@ videos, tracking lesson progress, and user registration</li>
                 </div>
 
                 <div className = "my-10 grid gap-4 grid-cols-5 mx-auto">
-                    <div className= "col-span-1"> <img src= "https://via.placeholder.com/150"/> </div>
-                    <div className = "col-span-4">
+                    <div className= "col-span-0 md:col-span-1"> <img src={process.env.PUBLIC_URL + "UP.png"} className = "object-scale-down max-w-[100px] mx-auto hidden lg:block"/> </div>
+                    <div className = "col-span-5 md:col-span-4">
                         <h3 className = "font-bold text-2xl md:text-3xl xl:text-4xl">BS Computer Science - University of the Philippines Diliman</h3>
                         <div><span className = "text-sky-400 font-light">Aug 2017 - Dec 2019</span></div>
                         <p className = "mb-3">UP Diliman is one of the top universities in the Philippines. <br/> I took BS Computer Science but I never really felt challenged by the curriculum so I spent most of my time attended hackathons and doing freelance projects. I dropped out during my sophomore year so I could pursue MedHyve full time.</p>

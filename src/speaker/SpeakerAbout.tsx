@@ -1,4 +1,7 @@
 import React from 'react'
+import {PhotoProvider, PhotoView} from "react-photo-view"
+import 'react-photo-view/dist/react-photo-view.css';
+
 
 function SpeakerAbout() {
     return(
@@ -16,6 +19,14 @@ function SpeakerAbout() {
             </p>
             <div>
                 <h4 className = "mt-12 mb-5 font-bold leading-none text-xl md:text-2xl xl:text-3xl">Photos</h4>
+                <PhotoProvider>
+                    <PhotoView src="Gab.JPG">
+                        <img src="/Gab.JPG" alt="Gab Standing Photo" className="w-24 md:w-32 l:w-56 xl:w-60 mx-2 inline cursor-pointer" />
+                    </PhotoView>
+                    <PhotoView src="Gab Sitting.JPG">
+                        <img src="/Gab Sitting.JPG" alt="Gab Sitting Photo" className="w-24 md:w-32 l:w-56 xl:w-60 mx-2 inline cursor-pointer" />
+                    </PhotoView>
+                </PhotoProvider>
             </div>
         </section>
 

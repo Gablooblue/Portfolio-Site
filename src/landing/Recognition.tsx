@@ -1,5 +1,7 @@
 import React from 'react'
 import recogPhotos from '../assets/recog-photos.js'
+import {PhotoProvider, PhotoView} from "react-photo-view"
+import 'react-photo-view/dist/react-photo-view.css';
 
 function Recognition() {
     return (
@@ -11,12 +13,16 @@ function Recognition() {
                     <div className = "col-span-2 md:col-span-1">
                         <div className = "my-4">
                             <div className = "flex flex-wrap mx-auto justify-center">
-                                {recogPhotos.map( (e) => (
-                                    <div className = "w-1/2 md:w-1/3 p-1">
-                                        <img className="block object-scale-down w-full h-auto " src= { process.env.PUBLIC_URL + e} />
-                                    </div>
-                                ))
-                                }
+                                <PhotoProvider>
+                                    {recogPhotos.map( (e) => (
+                                        <PhotoView src={ process.env.PUBLIC_URL + e}>
+                                            <div className = "w-1/2 md:w-1/3 p-1">
+                                                <img className="block object-scale-down w-full h-auto cursor-pointer" src= { process.env.PUBLIC_URL + e} />
+                                            </div>
+                                        </PhotoView>
+                                    ))
+                                    }
+                                </PhotoProvider>
                             </div>
                         </div>
                     </div>

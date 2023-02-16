@@ -1,6 +1,6 @@
 import React from "react"
-import socials from "./socials"
-import GithubButton from "./GithubButton"
+import socials from "../assets/socials"
+import GithubButton from "../components/GithubButton"
 
 function Projects() {
     return(

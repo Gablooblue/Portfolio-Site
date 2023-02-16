@@ -1,5 +1,5 @@
 import React from 'react'
-import recogPhotos from './recog-photos.js'
+import recogPhotos from '../assets/recog-photos.js'
 
 function Recognition() {
     return (

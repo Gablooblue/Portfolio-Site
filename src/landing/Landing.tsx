@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import '../stylesheets/Landing.css';
 import Hero from "./Hero"
 import Journey from "./Journey"
 import Projects from "./Projects"
@@ -8,7 +8,7 @@ import Contact from "./Contact"
 import Recognition from "./Recognition"
 
 
-function App() {
+function Landing() {
   return (
     <div className="bg-slate-900 text-white scroll-smooth">
         <Hero />
@@ -21,4 +21,4 @@ function App() {
   );
 }
 
-export default App;
+export default Landing;

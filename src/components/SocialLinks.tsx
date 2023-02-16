@@ -1,5 +1,5 @@
 import React from 'react';
-import socials from "./socials"
+import socials from "../assets/socials"
 
 function SocialLinks() {
     return (

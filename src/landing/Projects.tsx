@@ -4,7 +4,7 @@ import GithubButton from "../components/GithubButton"
 
 function Projects() {
     return(
-        <section className = "container mx-auto py-3 text-center max-w-screen-xl">
+        <section className = "container mx-auto py-3 text-center max-w-screen-xl px-4">
             <h2 className = "mb-7 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white text-center">Featured Projects</h2>
             
             <h3 className = "mt-12 mb-5 font-bold leading-none text-2xl md:text-3xl xl:text-4xl">Sayfe</h3>

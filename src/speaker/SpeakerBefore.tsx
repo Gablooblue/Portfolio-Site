@@ -2,7 +2,7 @@ import React from 'react'
 
 function SpeakerBefore() {
     return(
-        <section className = "container mx-auto py-3 max-w-screen-xl">
+        <section className = "container mx-auto py-3 max-w-screen-xl px-4">
             <h2 className = "mb-5 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white">Before Inviting Me</h2>
             <h4 className = "mt-12 mb-5 font-bold leading-none text-xl md:text-2xl xl:text-3xl">Understanding The Event</h4>
             <h3></h3>

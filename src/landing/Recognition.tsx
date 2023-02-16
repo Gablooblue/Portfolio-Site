@@ -27,7 +27,7 @@ function Recognition() {
                         </div>
                     </div>
 
-                    <div className = "col-span-2 md:col-span-1 my-4 bg-slate-800 p-12">
+                    <div className = "col-span-2 md:col-span-1 my-4 bg-slate-800 p-4 md:p-12">
                         <h5 className = "text-lg md:text-xl xl:text-2xl font-medium pb-2">Honors & Awards</h5>
                         <div className="table table-auto w-full font-light mb-12">
 

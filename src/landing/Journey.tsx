@@ -2,7 +2,7 @@ import React from 'react'
 
 function Journey() {
     return(
-        <section className = "container mx-auto py-3 max-w-screen-xl">
+        <section className = "container mx-auto py-3 max-w-screen-xl px-4">
             <h2 className = "mb-5 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white text-center">My Journey</h2>
             <p className = "text-center text-gray-400 mb-12 text-xl">I am a founder, DevOps, and fullstack engineer. <br/>
             My core competitencies are <span className = "text-sky-400">Managing Engineering Teams</span>, DevOps (<span className= "text-sky-400"> Docker, AWS </span>), Backend (<span className= "text-sky-400">Rails, Flask, Django</span>) and Frontend (<span className= "text-sky-400">React</span>)</p>

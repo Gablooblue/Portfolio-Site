@@ -2,7 +2,7 @@ import React from 'react'
 
 function SpeakerTalk() {
     return(
-        <section className = "container mx-auto py-3 max-w-screen-xl">
+        <section className = "container mx-auto py-3 max-w-screen-xl px-4">
             <h2 className = "mb-5 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white">What you can expect from my talks</h2>
             <h4 className = "mt-12 mb-5 font-bold leading-none text-xl md:text-2xl xl:text-3xl">What I talk about</h4>
             <h3></h3>

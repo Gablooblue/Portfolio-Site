@@ -5,7 +5,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 function SpeakerAbout() {
     return(
-        <section className = "container mx-auto py-3 max-w-screen-xl">
+        <section className = "container mx-auto py-3 max-w-screen-xl px-4">
             <h2 className = "mb-5 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white">About Me</h2>
             <p className = "mb-3 text-gray-300 font-light md:text-lg lg:text-sl">
                 Gabriel Henry Lopez is the co-founder and CEO of MedHyve, an international award-winning startup that's simplifying medical procurement for provincial hospitals.

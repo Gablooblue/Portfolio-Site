@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import '../stylesheets/Landing.css';
 import Hero from "./Hero"
 import Journey from "./Journey"

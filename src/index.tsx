@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './stylesheets/index.css';
 import Landing from './landing/Landing';
+import Speaker from './speaker/Speaker'
 import reportWebVitals from './reportWebVitals';
 import {
     createBrowserRouter,
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Landing />
     },
+    {
+        path: "/speaker",
+        element: <Speaker />
+    }
 
 ])
 root.render(

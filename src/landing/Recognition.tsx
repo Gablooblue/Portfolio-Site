@@ -65,6 +65,10 @@ function Recognition() {
                             <div className="table table-auto w-full font-light">
 
                                 <div className = "table-row-group text-md md:text-lg xl:text-xl">
+                                    <a href = "https://appworks.tw/why-we-invested-justin-marcel-gabriel-the-trio-of-gamer-engineer-and-founder-of-clout-kitchen/"className = "border-t pb-2 table-row hover:bg-slate-700">
+                                        <div className = "px-3 py-2 table-cell">2024</div>
+                                        <div className = "px-3 py-2 table-cell">AppWorks: Why We Invested: Justin, Marcel, Gabriel, the Trio of Gamer, Engineer, and Founder of Clout Kitchen</div>
+                                    </a>
                                     <a href = "https://asiatechpodcast.com/2022/08/10/ep-223-gabriel-lopez-co-founder-and-cto-at-medhyve-we-were-eventually-able-to-let-the-platform-speak-for-itself/ "className = "border-t pb-2 table-row hover:bg-slate-700">
                                         <div className = "px-3 py-2 table-cell">2022</div>
                                         <div className = "px-3 py-2 table-cell">Asia Tech Podcast - Gabriel Lopez at MedHyve</div>

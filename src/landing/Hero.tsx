@@ -29,7 +29,7 @@ function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        I'm a futurist, an engineer, and an entrepreneur <br/> 
+                        I'm a futurist, an engineer, and an entrepreneur <br/> <br/>
                         Dedicated to building world-changing tech, creating world-class teams, and developing strong business models
                     </motion.p>
 

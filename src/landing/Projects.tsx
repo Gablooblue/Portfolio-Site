@@ -68,10 +68,12 @@ function Projects() {
         transition={{ duration: 0.5 }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+          Featured Projects
+        </h2>
       </motion.div>
 
-      <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <ProjectCard 
             key={project.title}

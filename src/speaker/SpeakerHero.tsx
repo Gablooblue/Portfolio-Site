@@ -1,26 +1,39 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import SocialLinks from "../components/SocialLinks"
 
 function SpeakerHero() {
-    return(
-        <section className = "flex h-screen bg-slate-900">
-            <div className="grid max-w-screen-xl px-4 py-8 m-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-                <div className="mr-auto place-self-center lg:col-span-7">
-                    <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">Gabriel Henry Lopez Speaker Rider</h1>
-                    <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-300">I love speaking at events! Especially if they fit my focus on helping young people in the tech community. As someone who's been attending startup events since I was 15, it's something I'm incredibly passionate about. 
+    return (
+        <header className="px-[6vw] md:px-[9vw] pt-24 md:pt-32 pb-16 md:pb-24 min-h-[80vh] flex flex-col justify-between">
+            <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+            >
+                <p className="label-mono mb-10">00 &nbsp;·&nbsp; gabriel lopez &nbsp;·&nbsp; speaker rider</p>
+                <h1
+                    className="text-ink leading-[0.92] tracking-[-0.03em] font-semibold"
+                    style={{ fontSize: 'clamp(3rem, 8vw, 6.5rem)', fontStretch: '95%' }}
+                >
+                    Speaker
+                    <br />
+                    rider<span className="text-signal">.</span>
+                </h1>
 
-                        <br /> <br />
-                        I'm open to accepting invites from students as well. I find it very fulfilling to give talks in student-led organizations and events.</p>
-                    <SocialLinks />
-                    <a href="#contact" className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center  border rounded-lg focus:ring-4  text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800">
-                        Contact Me  
-                    </a> 
-                </div>
+                <p className="mt-10 max-w-[60ch] text-ink" style={{ fontSize: 'clamp(1.0625rem, 1.6vw, 1.25rem)', lineHeight: 1.55 }}>
+                    I love speaking at events, especially ones aimed at young people in
+                    tech. I&apos;ve been at startup events since I was 15, and I find it
+                    genuinely worthwhile to give back. I happily take invites from
+                    student-led organizations.
+                </p>
+            </motion.div>
+
+            <div className="mt-16 md:mt-24">
+                <SocialLinks />
+                <a href="#contact" className="link label-mono">book me →</a>
             </div>
-
-        </section>
+        </header>
     )
-
 }
 
 export default SpeakerHero

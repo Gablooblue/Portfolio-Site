@@ -21,7 +21,7 @@ function ScrollSpy({ sections }: ScrollSpyProps) {
         const element = document.getElementById(id);
         if (element) {
           const { offsetTop } = element;
-          if (pageYOffset >= offsetTop - 100) {
+          if (pageYOffset >= offsetTop - 120) {
             newActiveSection = id;
           }
         }
@@ -31,33 +31,32 @@ function ScrollSpy({ sections }: ScrollSpyProps) {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [sections]);
 
   return (
-    <nav className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 hidden md:block">
-      <ul className="flex flex-col gap-4">
-        {sections.map(({ id, label }) => (
-          <li key={id} className="flex items-center justify-end gap-3">
-            <span className={`text-sm whitespace-nowrap transition-colors duration-200 ${
-              activeSection === id ? 'text-white font-bold' : 'text-gray-600'
-            }`}>
-              {label}
-            </span>
-            <a
-              href={`#${id}`}
-              className={`block rounded-full transition-colors duration-200 ${
-                activeSection === id
-                  ? 'bg-sky-400'
-                  : 'bg-gray-700 hover:bg-gray-600'
-              }`}
-            >
-              <div className="w-3 h-3"></div>
-            </a>
-          </li>
-        ))}
+    <nav
+      aria-label="Section navigation"
+      className="fixed left-[max(1.25rem,2vw)] top-1/2 -translate-y-1/2 z-50 hidden lg:block"
+    >
+      <ul className="flex flex-col gap-2.5">
+        {sections.map(({ id, label }) => {
+          const active = activeSection === id;
+          return (
+            <li key={id}>
+              <a
+                href={`#${id}`}
+                className={`block label-mono transition-colors duration-150 ${
+                  active ? 'text-signal' : 'text-ink-muted hover:text-ink'
+                }`}
+              >
+                {label}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

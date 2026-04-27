@@ -1,53 +1,41 @@
-import { motion } from 'framer-motion'
-import CollapsibleList from './CollapsibleList'
+import { motion } from 'framer-motion';
+import CollapsibleList from './CollapsibleList';
 
 interface ExperienceCardProps {
-  logo: string
-  title: string
-  company: string
-  date: string
-  description: string
-  achievements: string[]
-  delay: number
+  title: string;
+  company: string;
+  date: string;
+  description: string;
+  achievements: string[];
+  delay: number;
 }
 
-const ExperienceCard = ({ logo, title, company, date, description, achievements, delay }: ExperienceCardProps) => (
-  <motion.div
-    initial="initial"
-    whileInView="animate"
-    viewport={{ once: true }}
-    variants={{
-      initial: { opacity: 0, y: 50 },
-      animate: { opacity: 1, y: 0, transition: { duration: 0.6, delay: delay * 0.2 } }
-    }}
-    className="group relative bg-slate-800/30 rounded-2xl p-6 hover:bg-slate-800/50 transition-all duration-300"
+const ExperienceCard = ({ title, company, date, description, achievements, delay }: ExperienceCardProps) => (
+  <motion.article
+    initial={{ opacity: 0, y: 12 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: '-80px' }}
+    transition={{ duration: 0.5, delay: delay * 0.04, ease: [0.25, 1, 0.5, 1] }}
+    className="group grid grid-cols-1 md:grid-cols-[10rem_1fr] gap-y-2 gap-x-8 py-6 md:py-8 transition-colors duration-150"
   >
-    <div className="flex flex-col md:flex-row gap-8">
-      <div className="flex-shrink-0">
-        <div className="w-20 h-20 rounded-xl overflow-hidden bg-slate-700/50">
-          <img 
-            src={process.env.PUBLIC_URL + logo}
-            className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
-            alt={`${company} logo`}
-          />
-        </div>
-      </div>
-      
-      <div className="flex-grow">
-        <div className="flex flex-col md:flex-row md:items-center gap-2 mb-3">
-          <h3 className="text-2xl font-bold text-white">{title} - {company}</h3>
-          <span className="px-3 py-1 bg-sky-400/10 text-sky-400 rounded-full text-sm whitespace-nowrap">
-            {date}
-          </span>
-        </div>
-        <p className="text-gray-400 mb-4">{description}</p>
-        <CollapsibleList 
-          items={achievements}
-          className="space-y-2 text-gray-300"
-        />
-      </div>
+    <div className="label-mono md:pt-2 group-hover:text-signal transition-colors duration-150">
+      {date}
     </div>
-  </motion.div>
-)
+
+    <div>
+      <h3 className="text-ink font-medium leading-tight tracking-[-0.01em] mb-1"
+          style={{ fontSize: 'clamp(1.375rem, 2.2vw, 1.75rem)' }}>
+        {title}
+        <span className="text-ink-muted font-normal">, {company}</span>
+      </h3>
+
+      <p className="text-ink-muted mb-4 max-w-[68ch]" style={{ fontSize: '1rem', lineHeight: 1.5 }}>
+        {description}
+      </p>
+
+      <CollapsibleList items={achievements} />
+    </div>
+  </motion.article>
+);
 
 export default ExperienceCard;

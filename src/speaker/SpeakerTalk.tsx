@@ -1,31 +1,59 @@
 import React from 'react'
 
 function SpeakerTalk() {
-    return(
-        <section className = "container mx-auto py-3 max-w-screen-xl px-4">
-            <h2 className = "mb-5 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl text-white">What you can expect from my talks</h2>
-            <h4 className = "mt-12 mb-5 font-bold leading-none text-xl md:text-2xl xl:text-3xl">What I talk about</h4>
-            <h3></h3>
-            <p className = "mb-3 text-gray-300 font-light md:text-lg lg:text-sl">
-                I can talk for hours about many different topics, but generally, I give really good talks about the following topics
-            </p>
+    const topics = [
+        'Startups and the experience of building one.',
+        'Being a young person in tech and startups.',
+        "Delivering pitches and talks that don't bore the room.",
+        "The tech industry and where it's heading.",
+        'Backend, cloud, and DevOps engineering.',
+    ]
 
-            <ul className = "ml-5 list-disc text-gray-300 font-light md:text-lg lg:text-sl">
-                <li>Startups and my experience in building one</li>
-                <li>Being a young person in the startup and tech industry</li>
-                <li>Delivering great pitches and talks</li>
-                <li>The tech industry and general trends</li>
-                <li>Backend, Cloud, and DevOps engineering</li>
-            </ul>
-            <h4 className = "mt-12 mb-5 font-bold leading-none text-xl md:text-2xl xl:text-3xl">My talk structure</h4>
-            <ul className = "ml-5 list-disc text-gray-300 font-light md:text-lg lg:text-sl">
-                <li>My talks will last no longer than 15 minutes, but I prefer to keep it shorter than this. This is because after 15 mins, most participants just stop listening </li>
-                <li>I like to do a lot of Q&A, so leave time at the end for that</li>
-            </ul>
-        </section>
+    const structure = [
+        'Talks run 15 minutes max. Shorter is usually better; attention drops fast past 15.',
+        'I like a real Q&A. Leave time for it.',
+    ]
 
+    return (
+        <div className="px-[6vw] md:px-[9vw] py-20 md:py-28">
+            <div className="grid grid-cols-1 md:grid-cols-[10rem_1fr] gap-x-8 gap-y-4">
+                <p className="label-mono md:pt-3">03 · Talk</p>
+
+                <div className="max-w-[68ch]">
+                    <h2
+                        className="text-ink font-medium tracking-[-0.02em] leading-[0.95]"
+                        style={{ fontSize: 'clamp(2.25rem, 5vw, 3.75rem)' }}
+                    >
+                        What I bring.
+                    </h2>
+
+                    <h3 className="mt-10 mb-4 text-ink font-medium tracking-[-0.01em]" style={{ fontSize: 'clamp(1.25rem, 2vw, 1.5rem)' }}>
+                        Topics
+                    </h3>
+                    <ul className="space-y-2.5">
+                        {topics.map((item) => (
+                            <li key={item} className="grid grid-cols-[1rem_1fr] gap-3 items-start" style={{ fontSize: '1rem', lineHeight: 1.55 }}>
+                                <span aria-hidden className="mt-[0.55em] block w-[6px] h-[6px] bg-signal" />
+                                <span className="text-ink">{item}</span>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <h3 className="mt-12 mb-4 text-ink font-medium tracking-[-0.01em]" style={{ fontSize: 'clamp(1.25rem, 2vw, 1.5rem)' }}>
+                        Format
+                    </h3>
+                    <ul className="space-y-2.5">
+                        {structure.map((item) => (
+                            <li key={item} className="grid grid-cols-[1rem_1fr] gap-3 items-start" style={{ fontSize: '1rem', lineHeight: 1.55 }}>
+                                <span aria-hidden className="mt-[0.55em] block w-[6px] h-[6px] bg-signal" />
+                                <span className="text-ink">{item}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </div>
     )
-
 }
 
 export default SpeakerTalk

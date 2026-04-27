@@ -3,36 +3,40 @@ import React, { useState } from 'react';
 interface CollapsibleListProps {
     items: string[];
     initialVisibleCount?: number;
-    className?: string;
 }
 
-function CollapsibleList({ items, initialVisibleCount = 3, className }: CollapsibleListProps) {
+function CollapsibleList({ items, initialVisibleCount = 3 }: CollapsibleListProps) {
     const [isExpanded, setIsExpanded] = useState(false);
-    
+
     const visibleItems = isExpanded ? items : items.slice(0, initialVisibleCount);
     const hasMoreItems = items.length > initialVisibleCount;
 
     return (
-        <div className={className}>
-            <div className="space-y-2">
+        <div>
+            <ul className="space-y-1.5 max-w-[68ch]">
                 {visibleItems.map((item, index) => (
-                    <div 
-                        key={index} 
-                        className="group flex items-center gap-3 py-1"
+                    <li
+                        key={index}
+                        className="grid grid-cols-[1rem_1fr] gap-3 items-start"
+                        style={{ fontSize: '1rem', lineHeight: 1.55 }}
                     >
-                        <div className="h-px w-4 bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-500 group-hover:w-6 transition-all duration-300" />
-                        <span className="text-gray-300 group-hover:bg-clip-text  transition-all duration-200">
-                            {item}
-                        </span>
-                    </div>
+                        <span
+                            aria-hidden
+                            className="mt-[0.55em] block w-[6px] h-[6px] bg-signal"
+                        />
+                        <span className="text-ink">{item}</span>
+                    </li>
                 ))}
-            </div>
+            </ul>
+
             {hasMoreItems && (
-                <button 
+                <button
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className="text-sky-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-sky-400 hover:via-indigo-400 hover:to-purple-500 mt-3 font-medium transition-all duration-200"
+                    className="label-mono mt-4 text-ink-muted hover:text-signal transition-colors duration-150"
                 >
-                    {isExpanded ? 'Show Less' : `Show ${items.length - initialVisibleCount} More`}
+                    {isExpanded
+                        ? '[ collapse ]'
+                        : `[ +${items.length - initialVisibleCount} more ]`}
                 </button>
             )}
         </div>

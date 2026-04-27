@@ -40,11 +40,10 @@ function Hero() {
                 <motion.p
                     custom={2}
                     variants={reveal}
-                    className="mt-10 max-w-[34ch] text-ink"
+                    className="mt-10 text-ink"
                     style={{ fontSize: 'clamp(1.25rem, 2.2vw, 1.75rem)', lineHeight: 1.35, fontWeight: 400 }}
                 >
-                    2× founder. 0&rarr;1 builder. Full-stack
-                    and AI engineer.
+                    2&times; founder. 0&rarr;1 builder. Full-stack and AI engineer.
                 </motion.p>
             </motion.div>
 
